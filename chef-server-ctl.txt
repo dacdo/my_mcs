@@ -1,0 +1,30 @@
+cd /etc/opscode
+mkdir wp
+type:
+chef-server-ctl org-create ‘wp’ ‘My Organization’ | tee wp.pem
+
+chef-server-ctl user-create wp-admin FIRSTNAME LASTNAME wp-admin@gmail.com wpadmin123 | tee wp-admin.pem
+
+chef-server-ctl org-user-add wp wp-admin --admin
+
+knife node list
+
+[root@n1 wp]# cat /etc/opscode/wp/config.rb 
+# Westpac config.rb
+chef_server_url        "https://10.10.10.99/organizations/wp"
+client_key             "/etc/opscode/wp/wp-admin.pem"
+node_name              "wp-admin"
+ssl_verify_mode        :verify_none
+#validation_client_name "wp"
+#validation_key         "/etc/opscode/wp/wp.pem"
+# remove after debugging
+config_log_level       :debug
+config_log_location    "/tmp/wp-admin.log"
+
+In any dir of vagrant user, cp 3 files
+-rwx------. 1 vagrant vagrant  426 Dec  6 08:58 config.rb
+-r--------. 1 vagrant vagrant 1675 Dec  6 08:57 wp-admin.pem
+-r--------. 1 vagrant vagrant 1679 Dec  6 08:57 wp.pem
+
+In the directory, can run
+knife bootstrap 10.10.10.100 -ssh-user vagrant --sudo  --node-ssl-verify-mode none -N wp-node9
