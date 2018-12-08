@@ -1,0 +1,250 @@
+chef-server-ctl org-list
+
+chef-server-ctl org-show uob
+
+chef-server-ctl org-create 'uob' 'United Overseas Bank'
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEArszo3+qnZQuY29XkkunQKWGh2aibC2UXoLgjg53MvCsABwX2
+Y4/eqAFBLGc9O2jCLOk3fENoVidvYF5DGE7w7T4d//G7ahvVkfN89ohYV0TpCfdO
+1Gfaqu4hDWbcIXwMRyrgANdUNH+UZEY19KTUEs/bymQ22ZzZM9rBfvYIigAIXw74
+FnULMiJbf8aTnmfeFzYI9mhQYB+zF4B9JHqomQN4aFiz3aR9bRktdj5/SZ0gp8Qc
+XINhjvMsS9h+P7RnFZLCEOcoMYaUJltHM058RaONBTA+n7LdezYcyIeBM3b3m3Y+
+oIM9XuqfjYQMgnbcfO4sHfKT96wC8mWbair3GQIDAQABAoIBAFNdttLT/vHaDhUK
+dfD7QiP6RE6icw+ELzifmZBz+ejkOScgWNozC2Xk80hSFIn49GKm96d0Hpa4SA4V
+5rn5LD55maUvjMqWa80n6zlI3ZkBbIMsR5RV05wh5fGWVPZDSzfF4v+Dss0263bH
+ZYQ/+ETgjVqBYQd4Hr70XcRHYtstTu4x7QiwE2Dxc6C4rWWVJvjyRI5WP2rHpTpJ
+OgcNE6HwkqDi1FpARnVb75xgji75I7js5+Mzqg+USeGppoekqph5/bn3OyhDXz6O
+GNS18uBgirwBZl7ojaSUKzoAcaqLttSxBaAQJ4XgA47sxW5AjdsyYuvc+WmmE2RN
+N3PJmWECgYEA2ofps0DeDeShiiwhaVDg6XV4ecuaC9Tul8U1CZKG01kmsEBR14Hv
+QgUA4dhSvaXUG1DnTylQFnUhRY21yKPTqw+mjpcXqbdVvUjhRiLk3Bp4yz8nD8bx
+SBh+AbHtPnwS6qzbrSnhJGPbPHK7KeQ1XVAvUUXlY7t+Pe54HH+t4QMCgYEAzMWD
+RL9V5DLtOLR0GoakiO1HYB3PI1CfHtgKarjhdudfEg4I6iReRtO68wbSkw52gToo
+eXXO/9p46JgaYuhiDzIdB97Omax1k9GjfEppK529Tq1dff8YoHuJprvSlKlj6H9p
+aBv3iyN96dRYJjauCRIkGpzRtyi49y/SzAdgNrMCgYADJPeA48sOKh8E7POiH07N
+LSqJnhteVjcEqgrEU35rJho/aP2Ee1MlAQttNH6kSfGOXxCk+/QyDodnB8340Bqo
+mHYOETB++atbKORM7Q2b+SmJyyPVv0gTgH63qYa/YmunQst6Z2Lc8i7iZMg6pxT5
+fcDgi3/senMrkvXZeyDWXwKBgDBSF3Tclb8gyVvNMWylAySQoXwr7JpPxwy3PFYM
+xJ+TX5raFv5xkJG0GvSIUp6DFjHOcIig5TT47/krE2btoV4mnDUkPaqDyMcV/Dcz
+M/gn4+kx/dLipIQSQtxGjB2qjzno/w2jM9nwiSDpi9eQpabcUgq5oL9Q67zg2yRs
+RScDAoGAVJw/oApHQUXHnbrrDIHFXGHMHNNcVYJbSJJDZ93hoKZ0Xpc0TaeQ6ENs
+IRZQyFL+VyxGCO9W5WdnI/7WJCHzghayBOUskIJYzFQLprxkjd2DiBFa9tVVBNPS
+8pFfpO1ElK043OjHscHRNWeDaJHanrNM+EhcbuKWNGfhUItdLLY=
+-----END RSA PRIVATE KEY-----
+
+
+chef-server-ctl user-create uob-admin FIRSTNAME LASTNAME uob-admin@gmail.com admin123 | tee uob-admin.pem
+
+chef-server-ctl org-user-add uob uob-admin --admin
+
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAseIyXvW1vppFLMyG19Xvw2guNmGikpnEiOZdpch3dCAoPmFY
+8SSgbx35e4CpU0BqGTEvMsRTXRJ7XEphVt1JWnVvt060z245hhAQNyEZZT9at36Y
+4OuFRzMr55KH8NtgwNH8dc4AS3cbeA5fLaJRUFvThPyVBi0mtHOHBkX88Ql4MEXU
+gncL8257+PENTct7HX+DianaKfFpleSKWCLrP4atVCEeXHLgagbzMIXG6JZpVk1o
+8cw4bYWlW2XUmreMPVpQxooEToSoG2dD/Y0lw3gPlNgyudtAOBK3eH32Pe8au8nJ
+In3yfv8qMUM97HKE7J/xaBfounyETAyWGwkdrwIDAQABAoIBACsa3gvmzMDAT2z4
+ruBUhkI615/z7tpJireF40GOH2wzcq0TF+NvdbUXdWI5Hk7/N/ac1YweyPivxtbp
+a0cKXoEeHhE0cFonoqba86L4UVgYjxoSAmfWirhjLQtzlZ+G+Z4gBGZjoeynky93
+hBbh04R+i/YY4t/ZRxzJNfoOMaoSspyc/Fx+5v8o74ZMTqQ2bjgII8cHWWhi4L2Y
+1euY+gEuUufnjW+MOzl0oID3tYfgz2KNnRbYhKmGd+XPlFNV/IbcrpDorsmNERcv
+09IfnZrZc3knKTtOU2aknoBfMivulok9CmmGI47ApBFF3Vn2JZ1jXXliBd8fewTH
+Afl3oYkCgYEA5z0E+bv4kiwx/J3yR900U47PKWZI5qvGy2XLZiAeM6tAdJ78839w
+n1sD0H9+CynYjwnd1++Xk/O6cFQhfGDFVmynCtiRngVHOF6/8L0PSqtC+nhB9PaL
+4YevMXSFJ8FJTIyUo4WMAgYqxB5yP14nN39GGgo48UCgc7OQjMcvxSUCgYEAxO6N
+hW3MU6t6nM1/XFBI91G3uNLfuiBcN38bzx1sGbLM0jrQ71jY4MeSP6Idqh3X7jNm
+0bC51TzbxYXIyJE21bX8e5lq3y53mlJUAFkdo/1BBai5FhWX1WFaRLKm5IVO1L98
+yhNBlh8q6sYaWI5VoEI25UQelnrzOhFmPxBH4UMCgYEAnAufifABhJLygKkN0NVD
+9IdQ4X03AQM2uhfNtPNDrlaIvqpzxNZhaAiBgHgo1Nu+WnisDoaO4bb+P8NmfYrI
+YNQdvcH8MokZUL8QBCNxaFA+eMwipm6iYuWvok4hdXyIPHI59Eew/cSvo31wV7bv
+/BGVewke+B9GqA2rJHVelUkCgYAzWonpG4LG5taogSYPKph8dgDU35ib7shdaHYW
+AnQoF2o2AERvxdl4dFJ86YeWzwV6BklvsQgkxSQCVCrRspx8CmL20EEARhvGUGW7
+WYHTO71y/laVnbfkWuixNW0z9ldiPzUJdRALV8FXS6WfJi7KBbpO+v6G+zTmFZd2
+Joa4BQKBgQDcmZFe18sapbunbyXjuLIdalR6805mLTv9QXQNrWZDG9qgYcA9ZmaA
+ej+vCWf38VoLIyvl3+4gZb67Maolz4XNpjmxFtCzg5q4xuLo6oS5DPagCUvTwaMf
+wmEADzyu9sRsChXs9d6VXDu+G8g6WOp7FiFygIu5F2xmWMRwg7+SLw==
+-----END RSA PRIVATE KEY-----
+
+chef-server-ctl org-user-add uob uob-admin
+
+chef-server-ctl user-show uob-admin
+
+
+/etc/opscode/managed/config.rb
+
+cat /etc/opscode/managed/config.rb
+# managed Chef config.rb
+chef_server_url        "https://localhost/organizations/chef_managed_org"
+client_key             "/etc/opscode/managed/managed_user.key"
+node_name              "chef_managed_user"
+ssl_verify_mode        :verify_none
+validation_client_name "chef_managed_org"
+validation_key         "/etc/opscode/managed/managed_org.key"
+# remove after debugging
+config_log_level       :debug
+config_log_location    "/tmp/chef_managed_user.log"
+
+
+chef-server-ctl add-client-key uob uob --key-name uob
+
+chef-server-ctl list-user-keys uob-admin
+
+
+chef-server-ctl add-user-key uob-admin -k oub-admin.key
+
+[root@n1 opscode]# chef-server-ctl add-user-key uob-admin -k oub-admin.key
+New private key for key named oub-admin.key (please store, it is not saved in the database):
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAuUl1ifAI0OMNxnRb4XbuN6JA9ULGYyL8HAfyV+7AyYHMVdtw
++IguEGra8nnjfRk7xxdlBZW9jN49U5xe/9SNCIljPiJPc0ZSlIq58TLRBI5M8nHc
+B+B+sGvdC0Nql7ggh8+d7f70AFelbn93jZ0cwbtzJa3EwNUaNeae0u57pazzuUih
+7cQnd+9KJT2/5aMFq/Zi1O1rfJ6PKWChsnJrkZcPnqbyLvRF2p0xllBVWmno0p/l
+s2vT92iiagko+9w1nnfx/WMb2qrpTc8E9sjczL+Np5oGsez6dya9TCt0Mu+w3GN4
+HRgzc9sLTPAM3NLVFzOIHzYr5wd/YbLiNUgwIQIDAQABAoIBAB4fulNdyiEj+RZd
+zp5edqZm48a8P4LYqkJobFctgvx/9Ne0oK5XfZ2/sa8gcALjultJC2yYBsRDUZcp
+YiyXwwIzTAZLD72/Hif2UfrL9z2VYR89sbc6IX7PWpW9NTRLhEZwU83g2IzBsyy+
+3pIQjB9XOYZTtRxgyS0gPIwwp7uslsUv3qYgf7usoN8yS/P/QKQl/X5KvLY7iE2r
+CRjlAdqtrtonw2Xbi61vwRNpJEUYDIqAm4BkoGuNT4ACUVGLD46xis4zI+Ncmkgg
+7SnE8nGJjUs9Ucg3eFjzqzaHQCUIUV6yuXuKdEuyr5M31u/dUTR1anpdrzqrV2FD
+e4noA20CgYEA6l01jKUOoDAACNRN5nTdd51EzkiTzSF6KQLyZqg+WFrCi+q7pCN4
+Thpft9dks6ywRMRVBytGxEKblam6ZHi7GOP6zMu6IZVxgER4exwE1EvN3WuM21aN
+GgdUHP49zNYuGE/XVB2KPPyK/+rNXtn4zj+SpgrHdgD+b4cHd0EDf2MCgYEAymRl
+cvyQ9rwXzGJsisuiV1De81M77AihTHw4ZLP+n2QbVMiK/obomgyDYTYDcwOQOnJ0
+VqnHSpD7+M08+vWIiv2wHffg0AUojWsxK63JMZncBVEPSHzovakgAsiMHWuwgOgi
+IeCohAZ2MQ8REJL0hqrgaP4br3mdeJgev6lXU6sCgYEAmjmCPq5zpHhR3X2QUeJ/
+xvIIUFM0aB3qnMhiqal3dX8sXRS4LDhnN8ZlTL6CdzZhvK8SYShaZlaKuf86OFm2
+jZeg+Fnsf6MvUMA+JI14pBfKPjZDOCeJrSI7eOTZ2EztgnQv+BuEV8O82NI0GYIJ
+F/h/0aJwRbg7tzq9b/2pho8CgYEAqwJ/kdQEbOZrOV/klLYRGrQTXgfzNrHoEGdZ
+gwVvXKBKU64Le5rkSN3P2MC502GsaSYyVNOpt8Cflw9bujTixYYrXHcIttvU8wEi
+j+SMfmOhu8BNKJOaWD7h9Fgdw/ItNg5uYK+h08Rd83/mjFmPUYZqjWxAWllpC++E
+868TQXcCgYBswdGwWH5rPvAxvFyMNA78lcQk1mItglebHCRLzYzkXye0rcKmY1O4
+txzqeiBNxKkxCJ5G8U4iMmgh/V3NrpBOGh5kCUxHfXEfaWo7HIeYZMsnlXMxRiFb
+Wt3uxZqgNKlL31jlzoEmf8i+E+gdUp8HAwY/Ubt1MFjS97+mplRGQw==
+-----END RSA PRIVATE KEY-----
+
+chef-server-ctl add-client-key uob uob -k uob.key
+
+knife bootstrap 10.10.10.100 -ssh-user vagrant --sudo  --node-ssl-verify-mode none -N node2 
+
+chef-server-ctl org-user-add <org> <user> --admin
+
+chef-server-ctl org-user-add uob uob-admin --admin
+User uob-admin already associated with organization uob
+User uob-admin is added to admins and billing-admins group
+
+yes id_rsa | ssh-keygen -t rsa -N “” -b 2048
+
+scp $1 vagrant@10.10.10.100:/tmp/$1
+scp vagrant@10.10.10.100:/tmp/$1 $1
+
+
+[root@n1 .chef]# knife user key create uob-admin -k uob-admin.key
+Created key: uob-admin.key
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAv7JHJ1qJYNNS6ywi37PEwd2QRIRD5n5/wb318P/R4sP6vXhb
+VD7YYuJC0Z7MD2H1fbb2axXGoCyPOXNJK3eiTqgY9DiZ1mzZsuMXLY8fyQaR+DeX
+to32GKyI1oex3tNv2kYmWvdDueNsKVf/0zGjxoZhk3uXAieFA49jLlpjahmV5jaQ
+n88zjLZHsqj/cFCfnUiIYNHZVqcgR94wiJsHJq55fwYqgAX1zLeu6ExvwUUZNM6f
+d+2L/lwFH1P65f0RcYpsGirZxF/7UYnlmBUt7z0LPHLvUsqTckfsF0gwNRX6LK5c
+ddLtOxp5Jg0ckA2VrZRUAL8py6x2qPwKMCNkcwIDAQABAoIBAHxhVY+wS/D6TRPw
+WFRj1Seg9kmutEvrCkQQWHLd2jZTyO6FGGUqPcazXn2alnborZu7SlojD/S/1NKG
+/hPpFPQKV96mlxKtH/fVJyXVdt89lxrCH3tA00whLsxb0UpuUGYFHD/rrhMAAB83
+TPOggs5+RPOnvkyUjdbIg6cA2P5uqSD0yB/36dArh3PjQkSQlg+RSdTE/zN/2rTI
+1CWUpszwbAw6PrBwn9pGW7xsRVNUb4PX58MDOeGtyHOqE5YDCMdtAFj+YGgVzKx9
+nc53fV1ToG4xAEESeLVWmLTv0r9kyd+2Ex6SEQbZKCX6EvuIINaYfQz95VL/UQaj
+LWEsMokCgYEA71yiWF2VPGLEwPcX6rfnjUNpZ8W9LbQBus8IDur0fQKXXu+vtavt
+3zjW4qbDrwD3QLZZcqmT9pzeusjx733yjbaLiD4ZWuz7IL+3acV/R+sRDpG2kcPs
+Oad8xbtjj8JpCRqPeSwn5z2U0WTxx9eMjN0aIPKwN6SNVEbd9GzzKfcCgYEAzQVz
+31KekMbOO1H8JP6Ecrd0YSkqjFzxa0u5LJmwv2kqXmLrHAHez0AFPpmu1rQYrn0m
+Fs74WEBl44hXj89I9UUevRnl77f8JpLkXj0NYLj6i0CMM1sEgjB31DoqEQOAgq4Z
+pSw4x3VRgG9kbF1cy9McvKIfCs51DKmTsN9lWmUCgYEAscxkhzEUjqNrNU8WA/MR
+W9xMKpo2eQFyG3p3qOUcMNPA7vMp2M/aROqqq/dl+dPE1dvdu499aj2CMMrc86Hh
+jySepthB60mHDP971WSvtBNHO0Q/ki0vhnAD/bjBLuMhNHL3SfHjvh//MD9EXcae
+D3CZXQoInXxswsJVUp+vTGcCgYBQP3YfT4NpP6exaGG9STImhNA0x5wz3J1SVg1g
++7dG9K70ytsj10eS74gd/KGGwG94vNuPyetC/9HhwZgkXgo8lpV1hxGNRwKXRp/E
+kzkNRtoqb1VxNIsLOlVs6GdWyXwfqm23TRvcVntUPkWcdN7BmRyCaSKlZDJEhouc
+i5RsUQKBgQDf2MuVhTqNtqfh+18qaHjvnMnC0YfbzMwTBKjeGEa4mh467k8/YU9t
+x4kLenmxlFANBIMNhazlkAcnihsm2zlgW6VBUVBJSapn8WmA9dO7QFZbDmo5ZbtQ
+5eq6QYAx8FCc/4DT/ZRzKNvIkS0jSJEhML/YhaXiAgbYWSRDgNAZFg==
+-----END RSA PRIVATE KEY-----
+
+
+knife bootstrap 34.216.104.21 -ssh-user ec2-user --sudo  --node-ssl-verify-mode none -N oregon-node 
+
+knife bootstrap 18.216.99.136 -ssh-user ec2-user --sudo  --node-ssl-verify-mode none -N ohio-node 
+
+
+======================
+cd /etc/opscode
+mkdir wp
+type:
+chef-server-ctl org-create ‘wp’ ‘Westpac Bank’ | tee wp.pem
+
+
+chef-server-ctl user-create wp-admin FIRSTNAME LASTNAME wp-admin@gmail.com wpadmin123 | tee wp-admin.pem
+
+chef-server-ctl org-user-add wp wp-admin --admin
+
+knife node list
+
+knife bootstrap 10.10.10.100 -ssh-user vagrant --sudo  --node-ssl-verify-mode none -N wp-node1
+
+ cat /etc/opscode/wp/config.rb 
+
+chef_server_url        "https://10.10.10.99/organizations/wp"
+client_key             "/etc/opscode/wp/wp-admin.pem"
+node_name              "wp-admin"
+ssl_verify_mode        :verify_none
+#validation_client_name "wp"
+#validation_key         "/etc/opscode/wp/wp.pem"
+# remove after debugging
+config_log_level       :debug
+config_log_location    "/tmp/wp-admin.log"
+
+In any dir of vagrant user, cp 3 files
+-rwx------. 1 vagrant vagrant  426 Dec  6 08:58 config.rb
+-r--------. 1 vagrant vagrant 1675 Dec  6 08:57 wp-admin.pem
+-r--------. 1 vagrant vagrant 1679 Dec  6 08:57 wp.pem
+
+In the directory, can run
+knife bootstrap 10.10.10.100 -ssh-user vagrant --sudo  --node-ssl-verify-mode none -N wp-node9
+
+knife node delete wp-node1
+
+======================
+chef push wp-policy-group my_ntp.lock.json
+
+
+knife node policy set wp-node9 wp-policy-group my_ntp
+
+list everything 
+
+knife list -R /
+
+************************
+
+/home/vagrant/cookbooks
+/home/vagrant/wp/config.rb wp-admin.pem wp.pem
+content of config.rb
+# Westpac config.rb
+chef_server_url        "https://10.10.10.99/organizations/wp"
+client_key             "/home/vagrant/wp/wp-admin.pem"
+node_name              "wp-admin"
+ssl_verify_mode        :verify_none
+#validation_client_name "wp"
+#validation_key         "/home/vagrant/wp/wp.pem"
+# remove after debugging
+#config_log_level       :debug
+#config_log_location    "/tmp/wp-admin.log"
+***********************
+knife.rb of dacdo account
+current_dir = File.dirname(__FILE__)
+log_level                :info
+log_location             STDOUT
+node_name                "uob-admin"
+client_key               "#{current_dir}/uob-admin.pem"
+chef_server_url          "https://10.10.10.99/organizations/uob"
+cookbook_path            ["#{current_dir}/../cookbooks"]
+ssl_verify_mode        :verify_none
+
