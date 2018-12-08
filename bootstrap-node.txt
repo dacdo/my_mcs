@@ -215,7 +215,6 @@ knife node delete wp-node1
 ======================
 chef push wp-policy-group my_ntp.lock.json
 
-
 knife node policy set wp-node9 wp-policy-group my_ntp
 
 list everything 
@@ -247,4 +246,7 @@ client_key               "#{current_dir}/uob-admin.pem"
 chef_server_url          "https://10.10.10.99/organizations/uob"
 cookbook_path            ["#{current_dir}/../cookbooks"]
 ssl_verify_mode        :verify_none
+
+tar cvf desktop.tar knife.rb uob-admin.pem
+mkdir cookbooks
 
