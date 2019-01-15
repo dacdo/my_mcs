@@ -1,7 +1,7 @@
 cd /etc/opscode
 mkdir wp
 type:
-chef-server-ctl org-create ‘wp’ ‘My Organization’ | tee wp.pem
+chef-server-ctl org-create ‘wp’ ‘My Organization’ -f  wp.pem
 
 chef-server-ctl user-create wp-admin FIRSTNAME LASTNAME wp-admin@gmail.com wpadmin123 | tee wp-admin.pem
 
