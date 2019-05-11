@@ -134,12 +134,14 @@ config_log_level       :debug
 config_log_location    "/tmp/chef_managed_user.log"
 ========
 
-knife bootstrap 13.54.114.133 -x centos -P dacdo1234! --sudo -N firstNode --node-ssl-verify-mode none
+knife bootstrap 13.54.114.133 -x centos -P <password> --sudo -N firstNode --node-ssl-verify-mode none
+knife bootstrap 13.211.120.176 -x centos -P <password> --sudo -N secondNode --node-ssl-verify-mode none
 
 *** allow port 443 on the chef server ***
 
-Verify 
+Verify, Run knife command in the directory where config.rb is 
 knife client list
+knife node list
 
 To allow ssh with password
 edit /etc/ssh/sshd_config
@@ -148,3 +150,19 @@ PasswordAuthentication yes
 
 then service sshd reload
 Redirecting to /bin/systemctl reload sshd.service
+
+****** each config.rb corresponds to one organization and its nodes **********
+
+chef_server_url        "https://ec2-13-54-5-20.ap-southeast-2.compute.amazonaws.com/organizations/uob_org"
+client_key             "/home/centos/workstation/.chef/keys/uob-admin.pem"
+node_name              "uob-admin"
+ssl_verify_mode        :verify_none
+#validation_client_name "uob_org"
+#validation_key         "/home/centos/workstation/.chef/keys/uob_org.key"
+# remove after debugging
+config_log_level       :debug
+config_log_location    "/tmp/uob_org.log"
+
+***** .key is the same as .pem *******
+
+
