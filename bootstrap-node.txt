@@ -80,8 +80,14 @@ knife node delete wp-node1
 knife bootstrap 13.54.114.133 -ssh-user centos --sudo  --node-ssl-verify-mode none -N first-node
 
 ======================
+To define policy for a node to run
 chef push wp-policy-group my_ntp.lock.json
 knife node policy set wp-node9 wp-policy-group my_ntp
+
+*** On workstation ****
+chef push uob-policy-group my_audit.lock.json
+knife node policy set secondNode uob-policy-group my_audit
+knife node policy set firstNode uob-policy-group my_audit
 
 list everything 
 knife list -R /
@@ -134,7 +140,7 @@ config_log_level       :debug
 config_log_location    "/tmp/chef_managed_user.log"
 ========
 
-knife bootstrap 13.54.114.133 -x centos -P <password> --sudo -N firstNode --node-ssl-verify-mode none
+knife bootstrap 13.211.204.195 -x centos -P <password> --sudo -N firstNode --node-ssl-verify-mode none
 knife bootstrap 13.211.120.176 -x centos -P <password> --sudo -N secondNode --node-ssl-verify-mode none
 
 *** allow port 443 on the chef server ***
