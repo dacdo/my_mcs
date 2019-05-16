@@ -140,8 +140,8 @@ config_log_level       :debug
 config_log_location    "/tmp/chef_managed_user.log"
 ========
 
-knife bootstrap 13.211.204.195 -x centos -P <password> --sudo -N firstNode --node-ssl-verify-mode none
-knife bootstrap 13.211.120.176 -x centos -P <password> --sudo -N secondNode --node-ssl-verify-mode none
+knife bootstrap 13.211.98.245 -x centos -P pass --sudo -N firstNode --node-ssl-verify-mode none
+knife bootstrap 54.252.192.53 -x centos -P pass --sudo -N secondNode --node-ssl-verify-mode none
 
 *** allow port 443 on the chef server ***
 
@@ -150,11 +150,10 @@ knife client list
 knife node list
 
 To allow ssh with password
-edit /etc/ssh/sshd_config
-
+vi /etc/ssh/sshd_config
 PasswordAuthentication yes
+service sshd reload
 
-then service sshd reload
 Redirecting to /bin/systemctl reload sshd.service
 
 ****** each config.rb corresponds to one organization and its nodes **********
